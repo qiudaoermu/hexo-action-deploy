@@ -5,7 +5,7 @@ set -e
 # setup ssh-private-key
 mkdir -p /root/.ssh/
 echo "$INPUT_DEPLOY_KEY" > /root/.ssh/id_rsa
-chmod 600 /root/.ssh/id_rsa
+chmod 644 /root/.ssh/id_rsa
 ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 
 # setup deploy git account
